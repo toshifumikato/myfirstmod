@@ -2,5 +2,6 @@
   "item.mccourse.alexandrite": "Alexandrite",
   "item.mccourse.raw_alexandrite": "Raw Alexandrite",
 
-  "item.mccourse.alexandrite_block": "Block of Alexandrite"
+  "item.mccourse.alexandrite_block": "Block of Alexandrite",
+  "creativetab.course_tab": "Kato Tab"
 }
