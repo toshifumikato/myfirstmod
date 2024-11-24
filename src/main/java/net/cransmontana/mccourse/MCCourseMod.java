@@ -50,6 +50,8 @@ public class MCCourseMod {
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS && ModItems.ALEXANDRITE.isPresent()) {
             LOGGER.info("Adding Alexandrite to Creative Tab.");
             event.accept(ModItems.ALEXANDRITE);
+            LOGGER.info("Adding Raw Alexandrite to Creative Tab.");
+            event.accept(ModItems.RAW_ALEXANDRITE);
         } else {
             LOGGER.info("Alexandrite not found");
         }
