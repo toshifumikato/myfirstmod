@@ -1,6 +1,7 @@
 package net.cransmontana.mccourse;
 
 import com.mojang.logging.LogUtils;
+import net.cransmontana.mccourse.block.ModBlocks;
 import net.cransmontana.mccourse.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
@@ -27,6 +28,7 @@ public class MCCourseMod {
     public MCCourseMod(FMLJavaModLoadingContext context) {
         IEventBus modEventBus = context.getModEventBus();
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
@@ -54,6 +56,10 @@ public class MCCourseMod {
             event.accept(ModItems.RAW_ALEXANDRITE);
         } else {
             LOGGER.info("Alexandrite not found");
+        }
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS && ModBlocks.ALEXANDRITE_BLOCK.isPresent()) {
+            LOGGER.info("Adding Alexandrite Block to Creative Tab.");
+            event.accept(ModBlocks.ALEXANDRITE_BLOCK);
         }
     }
 

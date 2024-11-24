@@ -1,0 +1,7 @@
+{
+  "variables": {
+    "": {
+      "model": "mccourse:block/alexandrite_block"
+    }
+  }
+}
