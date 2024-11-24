@@ -18,7 +18,12 @@ public class ModItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, MCCourseMod.MOD_ID);
 
     public static final RegistryObject<Item> ALEXANDRITE = ITEMS.register("alexandrite",
-            () -> new Item(new Item.Properties().setId(ResourceKey.create(Registries.ITEM, ResourceLocation.parse("mccourse:alexandrite")))));
+            () -> new Item(new Item.Properties().setId(ResourceKey.create(
+                    Registries.ITEM, ResourceLocation.parse("mccourse:alexandrite")))));
+
+    public static final RegistryObject<Item> RAW_ALEXANDRITE = ITEMS.register("raw_alexandrite",
+            () -> new Item(new Item.Properties().setId(ResourceKey.create(
+                    Registries.ITEM, ResourceLocation.parse("mccourse:raw_alexandrite")))));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
